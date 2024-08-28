@@ -1,0 +1,1 @@
+{"uuid":"d7b1698b-b6f2-477e-a471-e947ceace5bc","name":"Calculator_App_Automation","children":["2801a536-3fb8-47f4-8315-33facfbc7e7a"],"befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1724864051023,"stop":1724864060386}],"afters":[],"start":1724864051000,"stop":1724864085631}
