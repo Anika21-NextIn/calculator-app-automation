@@ -4,19 +4,12 @@ import org.testng.annotations.Test;
 
 public class CalcTestRunner extends Setup{
 
-    @Test(priority = 1, description = "Do Series_1")
-    public void doSeries_1(){
+    @Test(description = "Calculate Series", dataProvider = "TestData", dataProviderClass = TestDataset.class)
+    public void doSeries(String series, int resExpected){
         CalcScreen calcScreen = new CalcScreen(driver);
-        int resActual = calcScreen.doSeries_1(1,0,5,6);
+        String resActual = calcScreen.calcSeries(series);
         System.out.println(resActual);
-        Assert.assertEquals(resActual, 100);
-    }
-    @Test(priority = 2, description = "Do Series_2")
-    public void doSeries_2(){
-        CalcScreen calcScreen = new CalcScreen(driver);
-        int resActual = calcScreen.doSeries_2(5,0,1,2);
-        System.out.println(resActual);
-        Assert.assertEquals(resActual, 25);
+        Assert.assertEquals(Integer.parseInt(resActual), resExpected);
     }
 
     @AfterMethod
