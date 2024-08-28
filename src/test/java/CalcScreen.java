@@ -6,10 +6,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class CalcScreen {
-    @FindBy(id="com.google.android.calculator:id/digit_7")
-    WebElement btn7;
-    @FindBy(id="com.google.android.calculator:id/digit_5")
-    WebElement btn5;
     @FindBy(id="com.google.android.calculator:id/op_add")
     WebElement btnAdd;
     @FindBy(id="com.google.android.calculator:id/op_sub")
@@ -33,8 +29,7 @@ public class CalcScreen {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-        public int doSeries_1(int num1, int num2, int num3, int num4){
-
+    public int doSeries_1(int num1, int num2, int num3, int num4){
         driver.findElement(By.id("com.google.android.calculator:id/digit_"+num1)).click();
         driver.findElement(By.id("com.google.android.calculator:id/digit_"+num2)).click();
         driver.findElement(By.id("com.google.android.calculator:id/digit_"+num2)).click();
@@ -51,7 +46,6 @@ public class CalcScreen {
         driver.findElement(By.id("com.google.android.calculator:id/digit_"+num2)).click();
         btnEqual.click();
         return Integer.parseInt(txtResult.getText());
-
     }
 
     public int doSeries_2(int num1, int num2, int num3, int num4){
