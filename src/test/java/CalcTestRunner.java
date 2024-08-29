@@ -17,6 +17,4 @@ public class CalcTestRunner extends Setup{
         calcScreen.btnClear.click();
     }
 
-
-
 }
