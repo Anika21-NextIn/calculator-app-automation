@@ -1,4 +1,6 @@
-# Project Summery
+# Calculator app automation
+
+## Project Summery
 This project aims to automate the calculation of arithmetic series using a calculator app. The calculator app takes a mathematical series as a parameter and calculates the result accordingly. This repository provides the necessary code and instructions to automate the process of passing different series to the calculator app and obtaining the results.
 
 ## Project Scenario
