@@ -4,7 +4,6 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 import java.net.MalformedURLException;
-import java.net.URI;
 import java.net.URL;
 import java.time.Duration;
 
@@ -26,7 +25,7 @@ public class Setup {
         return driver;
 
     }
-    @AfterTest
+  //  @AfterTest
     public void quitApp(){
 
         driver.quit();

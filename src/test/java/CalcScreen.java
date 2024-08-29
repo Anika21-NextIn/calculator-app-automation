@@ -16,7 +16,7 @@ public class CalcScreen {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    public String calcSeries(String series){
+    public String doSeries(String series){
         for (char item : series.toCharArray()) {
             WebElement button = driver.findElement(getCalculatorLocatorId(item));
             button.click();
@@ -28,8 +28,8 @@ public class CalcScreen {
         return  resultElement.getText();
     }
 
-    private By getCalculatorLocatorId(char value) {
-        switch (value) {
+    private By getCalculatorLocatorId(char ch) {
+        switch (ch) {
             case '0': return By.id("com.google.android.calculator:id/digit_0");
             case '1': return By.id("com.google.android.calculator:id/digit_1");
             case '2': return By.id("com.google.android.calculator:id/digit_2");
@@ -45,7 +45,7 @@ public class CalcScreen {
             case '*': return By.id("com.google.android.calculator:id/op_mul");
             case '/': return By.id("com.google.android.calculator:id/op_div");
             case '=': return By.id("com.google.android.calculator:id/eq");
-            default: throw new IllegalArgumentException("Invalid character: " + value);
+            default: throw new IllegalArgumentException("Invalid character: " + ch);
         }
     }
 
